@@ -1,0 +1,6 @@
+   problemas encontrados                                   solucion 
+
+intalar paquetes npm i
+los archivos no se ejecutan               agregué type= "module" al package js 
+error al importar archivos                en ES se debe añadir la extension .js a las importaciones
+error funcion no se generan usuarios
