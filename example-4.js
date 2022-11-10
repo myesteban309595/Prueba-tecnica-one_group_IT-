@@ -1,5 +1,4 @@
 import {cleanConsole, createAll} from './data.js';
-import { example5 } from './example-5.js';
 const companies = createAll();
 
 //console.log('---- EXAMPLE 4 --- ', companies);
@@ -8,13 +7,13 @@ export const example4 =(companies)=> {
     
      let newCompanies = [];
 
-     companies.map(e=> { 
+     const value = companies.map((e)=> { 
         const company = e.name;
         //extraemos usuario y añadimos nuevo atributo company
-        let noSortedUsers = e.users.map(p=> {
+        let noSortedUsers = (e.users).map(p=> {
             newCompanies.push({...p, company})
         })
-      })
+      });
      // nuevo array de objetos ordenado por edad descendiente
      const sortedUserCompanies = newCompanies.sort((a,b)=> {
         if(a.age > b.age){
@@ -25,12 +24,12 @@ export const example4 =(companies)=> {
             return 0
         }
     })  
-    //console.table(sortedUserCompanies);
+    console.table(sortedUserCompanies);
     //cleanConsole(4, sortedUserCompanies);
-    //example5(sortedUserCompanies) // envio data a la funcion example5
     return sortedUserCompanies
 } 
 example4(companies);
+//console.log(example4(companies));
 
 // -----------------------------------------------------------------------------
 // INSTRUCCIONES EN ESPAÑOL

@@ -4,6 +4,9 @@ const companies = createAll();
 cleanConsole(2, companies);
 
 console.log('---- EXAMPLE 2 --- ', companies);
+const hasCar=() => {
+    
+}
 
 export const example2 = (companies)=> {
     const companies = companies.map(e=> {

@@ -3,24 +3,19 @@ import {cleanConsole, createAll} from './data.js';
 const companies = createAll();
 
 //cleanConsole(6, companies);
-console.log('---- EXAMPLE 6 --- ', companies);
+//console.log('---- EXAMPLE 6 --- ', companies);
 
 const example6=(companies)=> {
 
-  const result = companies.map(e=> {
-    
-    // let user= (e.users).map((p,index)=> {
-    //   let {car, firstName, lastName} = p
-    //   let age= (p.age).toString();
-    //   const newName = firstName+lastName+age;
-    // })
-    let newName= (e.users).reduce((acumulador, iterador) => {
-      Object.assign(acumulador, `${iterador.firstName+iterador.lastName+iterador.age}`)
-    },{});
+  const myCar = new Object();
 
-    //console.log(newName);
-
+  companies.map(e=> {
+    e.users.map((u)=> {
+      myCar[`${u.firstName}${u.lastName}${u.age}`] = u.car
+    })
   })
+console.log(myCar);
+return myCar;
 }
 
 example6(companies);

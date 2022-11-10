@@ -50,7 +50,7 @@ import {createRandomNumber} from './data.js'
 
 //********************************************************************************************************* */
  
-//! Parte 3: Crear una función tomando como parámetro un "id" de "company" y
+//^ Parte 3: Crear una función tomando como parámetro un "id" de "company" y
 // permitiendo hacer un PATCH (como con una llamada HTTP) en todos los
 // atributos de esta "company" excepto en el atributo "users".
 
