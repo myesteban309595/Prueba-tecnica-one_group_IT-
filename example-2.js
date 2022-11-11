@@ -1,20 +1,29 @@
 import {cleanConsole, createAll} from './data.js';
 const companies = createAll();
 
-cleanConsole(2, companies);
+//cleanConsole(2, companies);
+//console.log('---- EXAMPLE 2 --- ', companies);
 
-console.log('---- EXAMPLE 2 --- ', companies);
-const hasCar=() => {
-    
-}
+const hasCar= true ;
 
-export const example2 = (companies)=> {
-    const companies = companies.map(e=> {
-        return e.users
+export const example2 = (companies, hasCar)=> {
+   const companiesResult = companies.map((e, index)=> {
+     const user = e.users.filter(u => {
+            return u.car === hasCar
+        });
+        return {
+            name:e.name, 
+            isOpen:e.isOpen, 
+            users:user, 
+            usersLength:user.length
+          }
     })
+    console.log(companiesResult[3].users);
+    return companiesResult ;
 }
-
-example2(companies, hasCar)
+  
+example2(companies, hasCar);
+//console.log(example2(companies, hasCar));
 
 // -----------------------------------------------------------------------------
 // INSTRUCCIONES EN ESPAÑOL
